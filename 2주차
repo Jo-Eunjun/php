@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <?php 
+    $result = 20*19999;
+        echo "<h1>";
+        echo "php 테스트<br>";
+        echo "조은준<br>".$result."<br>";
+        echo "</h1>";
+        echo 4*5;
+    ?>
+    <!-- 특징 -->
+    <!-- 대부분의 운영 체제에서 사용 가능 -->
+    <!-- 쉬운 db 연동 -->
+    <!-- 빠른 처리 속도 -->
+    <!-- 소용량 가벼움 -->
+    <!-- 쉬운 코드를 작성하고 단순한 문법 -->
+    <!-- 127.0.0.1 == localhost -->
+    <!-- 상수 -->
+    <!--  -->
+    <!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <!-- 윗 줄은 모바일도 볼 수 있게 설정한다는 것 -->
+    <title></title>
+    <style>
+        * {
+            width:100%;
+            margin:0;
+            padding:0;
+        }
+    </style>
+</head>
+<body>
+    <!-- <p>그림을 누르면 네이버로 이동</p> -->
+    <?php 
+        // $href = "https://www.naver.com";  
+        // $img = "aaa.jpg";
+        // echo 
+        // "<div id = 'img'>
+        // <a href = $href><img src = $img></a>
+        // </div>";
+    
+    ?>
+    영수증 <br>
+    <?php
+        $cnt = 5;
+        $money = 2000;
+        $total = $cnt * $money;
+    ?>
+    식사비는 총 <?=$total?>원 입니다.
+    </body>
+</html>
+</body>
+</html>
