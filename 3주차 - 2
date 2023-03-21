@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        table {
+            
+            margin:0 auto;
+        }
+        td{
+            width:200px;
+            padding:20px;
+            text-align:center;
+            font-size:20px;
+        }
+        p{
+            text-align:center;
+            font-weight:bold;
+            font-size:30px;
+        }
+        th {
+            padding:20px;
+            font-size:30px;
+        }
+    </style>
+</head>
+<body>
+    <p>환율 계산 테이블</p> <br>
+<?php 
+    $won = 1000;
+    $dollar = 0.00076;
+    $JPY = 0.1024;
+    echo "<table border=1>";
+    echo "<tr><th>원</th><th>달러</th><th>엔</th>";
+    
+    while($won <= 10000){
+        $wonchangedollar = $won * $dollar;
+        $wonchangejpy = $won * $JPY;
+        // echo "<tr><td>$won</td><td>".round($wonchangedollar)."$</td><td>$wonchangejpy</td></tr>";
+        echo "<tr><td>$won</td><td>$wonchangedollar$</td><td>$wonchangejpy</td></tr>";
+        $won = $won + 1000;
+    }
+    echo "</table>";
+
+
+
+?>
+
+</body>
+</html>
