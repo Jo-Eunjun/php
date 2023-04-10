@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <?php
+    echo $_POST["tat"];
+        
+        $t = "<br>"; //html 디자인 변수에 담아서 편하게 만들기
+        echo $t;
+        echo "반갑습니다~~".$_POST["sname"];
+        echo $t;
+        echo "비밀번호 : ".$_POST["pwd"];
+        echo $t;
+        echo "자기소개 : ".htmlspecialchars((nl2br($_POST["profile"])));
+        echo $t;
+        echo "학년 :".$_POST["syear"];
+        echo $t;
+        // echo "선택한 여행지 수:  ".count($_POST["travel"]);
+        // echo $t;
+
+
+        if(empty($_POST["travel"])) //여행지가 비어있다면
+            echo "여행지 선택 안함<br>"; //선택안한다고 출력하고
+          
+        else { //선택한경우
+            echo "희망여행지 & 회비<br>"; //선택한곳들의 여행지 회비
+            for($i=0; $i<count($_POST["travel"]); $i++){ //i에서 count까지post트라벨에 담긴
+                    //switch로 입력받은경우 등등 출력되게
+                    //travel 배열의 i번째출력
+                switch ($_POST["travel"][$i]) 
+                {
+                    case "tb":
+                        echo "티베트, 비용:5,000,000<br>";
+                        break;
+                    case "hk":    
+                        echo "홍콩, 비용:8,000,000<br>";
+                        break;
+                    case "sw":    
+                        echo "신장위구르, 비용:5,000,000<br>";
+                        break;                    
+                    case "tw":    
+                        echo "타이완, 비용:6,000,000<br>";
+                        break;   
+                
+                }
+            }
+    }
+    echo "숙박 유형";
+
+    switch ($_POST["stay"]){
+        case "0":
+            echo "숙박비 =0, 교통비=500,000";
+            break;
+        case "1/2":
+            echo "숙박비 =10,000 , 교통비=500,000";
+            break; 
+        case "2/3":
+            echo "숙박비 =20,000 , 교통비=500,000";
+            break;
+        case "3/4":
+            echo "숙박비 =40,000 , 교통비=500,000";
+            break;           
+    }
+    echo $t;
+
+    ?>
+</body>
+</html>
